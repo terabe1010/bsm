@@ -46,6 +46,9 @@ $(function () {
   $('#menu-sp a').on('click', function () {
     $('#header').removeClass('open');
   });
+  $('#fixed-menu-sp a').on('click', function () {
+    $('#header').removeClass('open');
+  });
 
 
   /*=================================================
