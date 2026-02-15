@@ -5,8 +5,6 @@
 }
 html {
   font-size: 100%;
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px;
 }
 body {
   font-family: "Noto Sans", Arial, sans-serif, "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
@@ -792,11 +790,14 @@ SP
   -------------------------------- */
   #header .site-title {
     font-size: 1.5rem;
+    margin-left: 16px;
   }
   #header .wrapper {
     padding: 0 16px;
   }
-
+  #header .hamburger {
+    right: 20px;
+  }
   /* --------------------------------
   [SP]スクロールダウン
   -------------------------------- */
