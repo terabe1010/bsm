@@ -376,7 +376,6 @@ services
   align-items: center;
   gap: 0 3%;
   margin-bottom: 80px;
-
 }
 #services .flex .img {
   width: 60%;
@@ -388,7 +387,7 @@ services
   height: 100%;
   object-fit: cover;
 }
-#services .desc {
+#services .flex .desc {
   width: 40%;
   text-align: center;
 }
@@ -599,15 +598,6 @@ TB
     margin-left: 25px;
     position: relative;
   }
-  #menu-sp .menu .cottage::before {
-    content: "";
-    width: 6px;
-    height: 1px;
-    background-color: #00807F;
-    position: absolute;
-    top: 13px;
-    left: -10px;
-  }
   .open #menu-sp {
     right: 0;
     opacity: 1;
@@ -761,26 +751,6 @@ TB
     bottom: 6%;
   }
 
-  /* --------------------------------
-  [TB]strength
-  -------------------------------- */
-  #strength .flex .text {
-    padding-left: 30px;
-  }
-  /* --------------------------------
-  [TB]case
-  -------------------------------- */
-  #case .list .item .img {
-    width: 95%;
-  }
-
-  /* --------------------------------
-  [TB]footer
-  -------------------------------- */
-  #footer .flex .contact, 
-  #footer .flex .info {
-    width: 35%;
-  }
 }
 
 /*-------------------------------------------
@@ -812,11 +782,17 @@ SP
     animation: logo_fade 2s 0.5s forwards;
     width: 100px;
   }
+  .flex {
+    flex-direction: column;
+  }
   .br-sp {
     display: block;
   }
   .br-pc {
     display: none;
+  }
+  section {
+    margin-bottom: 80px;
   }
 
   /* --------------------------------
@@ -839,13 +815,7 @@ SP
   /* --------------------------------
   [SP]mainvisual
   -------------------------------- */
-  #mainvisual {
-    background-position: center top;
-    background-image: url(../img/top/top-sp-img1.jpg);
-  } 
-  #mainvisual .br-sp {
-    display: block;
-  }
+
   #mainvisual .concept-title {
     bottom: 35px;
     left: 15px;
@@ -854,195 +824,60 @@ SP
   }
 
   /* --------------------------------
-  [SP]top-pr
+  [SP]strengths
   -------------------------------- */
-  #top-pr .list {
-    justify-content: space-between;
+  #strengths .flex {
+    align-items: center;
   }
-  #top-pr .list .item {
-    width: 32%;
+  
+  #strengths .flex .item {
+    width: 100%;
+    margin-bottom: 40px;
   }
-  #top-pr .link .btn {
-    padding: 15px 80px;
-    font-size: 1.2rem;
-  }
-  #top-pr .link .btn::after {
-    top: 23px;
-  }
-  #top-pr .title {
-    font-size: 1.5rem;
-  }
-  #top-pr .text {
-    font-size: 1.1rem;
-  }
-  #top-pr .list .item .text {
-    margin-top: 10px;
-    font-size: 0.9rem;
+  #strengths .flex .item .img {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
   }
 
   /* --------------------------------
-  [SP]strength
+  [SP]services
   -------------------------------- */
-  #strength .flex {
-    flex-direction: column;
-  }
-  #strength .flex .text .title {
-    font-size: 1.3rem;
-  }
-  #strength .flex .text {
-    width: 100%;
-    padding-left: 0;
-    margin-bottom: 20px;
-  }
-  #strength .flex .img {
+  #services .flex .img,
+  #services .flex .desc {
     width: 100%;
   }
-  #strength .flex.reverse {
+  #services .flex.reverse {
     flex-direction: column-reverse;
   }
-
-  /* --------------------------------
-  [SP]area
-  -------------------------------- */  
-  #area .flex {
-    flex-direction: column;
-  }
-
-  /* --------------------------------
-  [SP]service-top
-  -------------------------------- */
-  #service-top {
+  #services .flex .img {
+    margin-bottom: 30px;
     height: 300px;
   }
-  #service-top .service-title {
-    font-size: 1.7rem;
-    bottom: 10%;
-    left: 40px;
-  }
 
   /* --------------------------------
-  [SP]service
+  [SP]works
   -------------------------------- */
-  #service .flex {
-    flex-direction: column;
-    height: auto;
+  
+  #works .text {
+    margin-bottom: 0px;
   }
-  #service .flex .info {
-    width: 100%;
-  }
-  #service .flex .img {
-    width: 100%;
-  }
-  #service .flex .info .text {
-    margin-bottom: 20px;
-  }
-  #service .flex .img.flex .img-item {
+  #works .works-list dt,
+  #works .works-list dd {
     width: 100%;
   }
 
   /* --------------------------------
-  [SP]case
+  [SP]about
   -------------------------------- */
-  #case .list {
-    gap: 40px 0;
-    flex-wrap: nowrap;
-    flex-direction: column;
+  #about .flex {
+    gap: 30px 0;
   }
-  #case .list .item {
+  #about .flex .left,
+  #about .flex .right {
     width: 100%;
   }
 
-  /* --------------------------------
-  [SP]price
-  -------------------------------- */
-  #price .flex {
-    flex-direction: column;
-    gap: 0 6%;
-    margin-left: 30px;
-  }
-
-  /* --------------------------------
-  [SP]flow
-  -------------------------------- */
-  #flow .flex {
-    flex-direction: column;
-    margin-left: 30px;
-  }
-
-  /* --------------------------------
-  [SP]company-top
-  -------------------------------- */
-  #company-top {
-    height: 300px;
-  }
-  #company-top .service-title {
-    font-size: 1.7rem;
-    bottom: 10%;
-    left: 40px;
-  }
-
-  /* --------------------------------
-  [SP]message
-  -------------------------------- */
-  #message .flex {
-    flex-direction: column;
-    height: auto;
-  }
-  #message .flex .info {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  #message .flex .img {
-    width: 100%;
-  }
-  #message .staff .staff-member {
-    width: 100%;
-  }
-  #message .staff .flex {
-    gap: 45px 0%;
-  }
-  #message .staff .staff-member .img {
-    width: 70%;
-  }
-  #message .staff .staff-member .comment-title {
-    max-width: 100%;
-  }
-  #message .staff .staff-member .comment {
-    max-width: 100%;
-  }
-
-  /* --------------------------------
-  [SP]faq
-  -------------------------------- */
-  #faq .link .btn {
-    padding: 15px 80px;
-  }
-  #faq .link .btn::after {
-    top: 27px;
-  }
-  #faq .box .title .qa {
-    font-size: 1rem;
-    margin-bottom: 15px;
-  }
-
-  /* --------------------------------
-  [SP]privacy-top
-  -------------------------------- */
-  #privacy-top {
-    height: 300px;
-  }
-  #privacy-top .service-title {
-    font-size: 1.5rem;
-    bottom: 10%;
-    left: 20px;
-  }
-
-  /* --------------------------------
-  privacy
-  -------------------------------- */
-  #privacy .title {
-    font-size: 1.1rem;
-  }
 
   /* --------------------------------
   [SP]footer
