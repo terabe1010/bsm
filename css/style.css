@@ -22,6 +22,26 @@ body {
   --color-text-sub: #666666;
   --color-border: #E2E8F0;
 }
+:root {
+  /* ===== メインカラー（環境・企業カラー） ===== */
+  --color-main-green: #A0C862;
+  --color-main-green-dark: #76A84E;
+  /* ===== サブカラー（ソーラーパネル・技術） ===== */
+  --color-sub-blue: #3C9EC2;
+  /* ===== アクセントカラー（太陽・強調） ===== */
+  --color-accent-orange: #F5B147;
+  /* ===== 装飾カラー（ロゴ蜂用・必要に応じて） ===== */
+  --color-bee-brown: #624D21;
+  /* ===== ベースカラー ===== */
+  --color-white: #FFFFFF;
+  --color-bg-light: #FBFCFB;
+  /* ===== テキストカラー ===== */
+  --color-text-main: #333333;
+  --color-text-sub: #555555;
+  --color-text-light: #777777;
+  /* ===== ボーダー・区切り ===== */
+  --color-border-light: #E5E5E5;
+}
 a {
   color: var(--color-text-main);
   text-decoration: none;
