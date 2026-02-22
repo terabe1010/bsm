@@ -395,6 +395,117 @@ strengths
 }
 
 
+/* 全体コンテナ */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 2rem;
+}
+
+/* サービス共通設定 */
+.service-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+/* 偶数番目の左右反転 */
+.service-item.is-reverse {
+  flex-direction: row-reverse;
+}
+
+/* 画像エリア */
+.service-image {
+  flex: 0 0 60%; /* 画像の幅を60%に固定 */
+  z-index: 1;
+}
+
+.service-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* テキストボックス（オーバーラップの肝） */
+.service-content {
+  flex: 0 0 45%; /* ボックスの幅 */
+  background: #fff;
+  padding: 40px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  z-index: 2;
+  
+  /* 画像と重ねるためのマージン設定 */
+  margin-left: -10%; 
+}
+
+/* 反転時のテキストボックスのマージン */
+.service-item.is-reverse .service-content {
+  margin-left: 0;
+  margin-right: -10%;
+}
+
+/* テキスト装飾 */
+.service-content h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.service-content p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  border: 1px solid #333;
+  color: #333;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* --- レスポンシブ (スマホ対応) --- */
+@media (max-width: 768px) {
+  .service-item, 
+  .service-item.is-reverse {
+    flex-direction: column; /* 縦並びに変更 */
+    margin-bottom: 60px;
+  }
+
+  .service-image, 
+  .service-content {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .service-content {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: -30px; /* スマホでは上下に重ねる */
+    padding: 30px 20px;
+    width: 90%; /* 少し幅を狭めて浮かせる */
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+
+
 
 /* --------------------------------
 services
@@ -895,6 +1006,11 @@ SP
     margin: 0 auto;
     margin-bottom: 20px;
   }
+
+
+
+
+
 
   /* --------------------------------
   [SP]services
