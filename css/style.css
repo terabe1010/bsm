@@ -350,14 +350,12 @@ nav-menu
   padding: 10px;
 }
 
-
 /* --------------------------------
 message
 -------------------------------- */
 #message .text {
   text-align: center;
 }
-
 
 /* --------------------------------
 strengths
@@ -369,7 +367,6 @@ strengths
 #strengths .title {
   margin-bottom: 40px;
 }
-
 #strengths .flex {
   gap: 0 4%;
   justify-content: center;
@@ -384,11 +381,9 @@ strengths
   border-radius: 50%;
 }
 
-
 /* --------------------------------
 services
 -------------------------------- */
-
 #services .flex {
   align-items: center;
   margin-bottom: 80px;
@@ -429,7 +424,6 @@ services
   font-size: 1.5rem;
   display: inline-block;
   position: relative;
-  
 }
 #services .desc .title::after {
   content: "";
@@ -441,7 +435,6 @@ services
 }
 #services .desc .text {
   text-align: left;
-
 }
 
 /* --------------------------------
@@ -451,7 +444,6 @@ works
   background-color: var(--color-bg-light);
   padding: 40px 40px;
 }
-
 #works .text {
   text-align: center;
   font-size: 1.2rem;
@@ -495,7 +487,6 @@ works
   box-shadow: 0 15px 35px rgba(0,0,0,0.1);
   border-radius: 12px;
 } 
-
 #works .insta .text {
   margin-bottom: 5px;
 }
@@ -557,15 +548,12 @@ about
   margin-bottom: 20px;
 }
 
-
-
 /* --------------------------------
 contact
 -------------------------------- */
 #contact {
   text-align: center;
 }
-
 #contact .cta .btn {
   display: inline-block;
   padding: 10px 60px 10px 30px;
@@ -876,7 +864,6 @@ TB
   #mainvisual .concept-title {
     font-size: 2.2rem;
   }
-
 }
 
 /*-------------------------------------------
@@ -936,7 +923,6 @@ SP
   /* --------------------------------
   [SP]mainvisual
   -------------------------------- */
-
   #mainvisual .concept-title {
     font-size: 1.5rem;
     line-height: 44px;
@@ -968,11 +954,6 @@ SP
     margin: 0 auto;
     margin-bottom: 20px;
   }
-
-
-
-
-
 
   /* --------------------------------
   [SP]services
@@ -1044,7 +1025,6 @@ SP
     width: 100%;
   }
 
-
   /* --------------------------------
   [SP]footer
   -------------------------------- */
@@ -1057,4 +1037,3 @@ SP
     width: 100%;
   }
 }
-
