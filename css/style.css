@@ -13,16 +13,6 @@ body {
   background-color: var(--color-white);
 }
 :root {
-  --color-primary: #003366;
-  --color-secondary: #007BFF;
-  --color-accent: #FF9900;
-  --color-bg-light: #F8FAFC;
-  --color-white: #FFFFFF;
-  --color-text-main: #333333;
-  --color-text-sub: #666666;
-  --color-border: #E2E8F0;
-}
-:root {
   /* ===== メインカラー（環境・企業カラー） ===== */
   --color-main-green: #A0C862;
   --color-main-green-dark: #76A84E;
@@ -94,6 +84,9 @@ section {
 .flex {
   display: flex;
   justify-content: space-between;
+}
+#services .flex.reverse {
+  flex-direction: row-reverse;
 }
 .br-sp {
   display: none;
@@ -390,9 +383,7 @@ strengths
   text-align: center;
   border-radius: 50%;
 }
-#strengths .flex .img img {
-  
-}
+
 
 
 /* 全体コンテナ */
@@ -510,37 +501,56 @@ strengths
 /* --------------------------------
 services
 -------------------------------- */
-#services {
-  gap: 40px 3%;
-}
+
 #services .flex {
   align-items: center;
-  gap: 0 3%;
   margin-bottom: 80px;
+  position: relative;
+  align-items: center;
 }
 #services .flex .img {
-  width: 60%;
-  height: 400px;
+  flex: 0 0 65%;
+  height: 500px;
   overflow: hidden;
+  z-index: 1;
 }
 #services .flex .img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
 }
 #services .flex .desc {
-  width: 40%;
+  flex: 0 0 45%;
   text-align: center;
+  padding: 40px;
+  background-color: var(--color-white);
+  z-index: 2;
+  margin-left: -10%;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+#services .flex.reverse .desc {
+  margin-left: 0;
+  margin-right: -10%;
 }
 #services .desc .title {
   display: inline-block;
-  padding: 10px;
-  background-color: var(--color-secondary);
   margin-bottom: 40px;
-  color: var(--color-white);
-  font-weight: normal;
+  font-weight: 600;
   font-size: 1.5rem;
+  display: inline-block;
+  position: relative;
   
+}
+#services .desc .title::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50%;
+  border-bottom: 2px solid var(--color-sub-blue);
 }
 #services .desc .text {
   text-align: left;
@@ -615,9 +625,9 @@ contact
 #contact .cta .btn {
   display: inline-block;
   padding: 10px 60px 10px 30px;
-  border: 1px solid var(--color-accent);
+  border: 1px solid var(--color-accent-orange);
   position: relative;
-  background-color: var(--color-accent);
+  background-color: var(--color-accent-orange);
   color: var(--color-white);
 }
 #contact .cta .btn::after {
@@ -634,11 +644,11 @@ contact
 }
 #contact .cta .btn:hover {
   background-color: var(--color-white);
-  color: var(--color-accent);
+  color: var(--color-accent-orange);
 }
 #contact .cta .btn:hover::after {
-  border-top: 1px solid var(--color-accent);
-  border-right: 1px solid var(--color-accent);
+  border-top: 1px solid var(--color-accent-orange);
+  border-right: 1px solid var(--color-accent-orange);
   right: 20px;
 }
 
@@ -647,7 +657,7 @@ footer
 -------------------------------- */
 #footer {
   padding: 15px 0;
-  background-color: var(--color-primary);
+  background-color: var(--color-sub-blue);
   color: var(--color-white);
   text-align: center;
 }
@@ -741,7 +751,7 @@ TB
   #menu-sp {
     display: block;
     width: 100%;
-    background-color: var(--color-primary);
+    background-color: var(--color-sub-blue);
     padding: 140px 30px 0 30px;
     position: fixed;
     top: 0;
@@ -857,7 +867,7 @@ TB
   #fixed-menu-sp {
     display: block;
     width: 100%;
-    background-color: var(--color-primary);
+    background-color: var(--color-sub-blue);
     padding: 140px 30px 0 30px;
     position: fixed;
     top: 0;
@@ -903,7 +913,7 @@ TB
   .open #fixed-mask {
     width: 100%;
     height: 100%;
-    background-color: var(--color-primary);
+    background-color: var(--color-sub-blue);
     cursor: pointer;
     display: block;
     opacity: 0.8;
@@ -946,7 +956,8 @@ SP
     animation: logo_fade 2s 0.5s forwards;
     width: 100px;
   }
-  .flex {
+  .flex,
+  .flex.reverse {
     flex-direction: column;
   }
   .br-sp {
@@ -1019,12 +1030,12 @@ SP
   #services .flex .desc {
     width: 100%;
   }
-  #services .flex.reverse {
-    flex-direction: column-reverse;
-  }
   #services .flex .img {
     margin-bottom: 30px;
     height: 300px;
+  }
+  #services .flex.reverse {
+    flex-direction: column;
   }
 
   /* --------------------------------
