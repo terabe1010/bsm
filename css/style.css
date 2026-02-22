@@ -493,6 +493,7 @@ works
   background-color: var(--color-white);
   padding: 20px;
   box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  border-radius: 12px;
 } 
 
 #works .insta .text {
@@ -502,6 +503,22 @@ works
   font-size: 1.2rem;
   color: var(--color-main-green-dark);
   transition: ease 0.3s;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-weight: 600;
+  text-decoration: none;
+}
+#works .insta .link::after {
+  content: "\f178"; /* fa-arrow-right-long */
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
+  margin-left: 0.4em;
+  transition: transform 0.3s ease;
+}
+#works .insta .link:hover::after {
+  transform: translateX(6px);
 }
 #works .insta .img {
   width: 25%;
@@ -510,48 +527,6 @@ works
   height: 80px;
 }
 
-/* 
-#works .works-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 50px 2% ;
-}
-#works .works-list dt {
-  width: 38%;
-}
-#works .works-list dt .img {
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-}
-#works .works-list dt img {
-  width: 100%;
-  height: 100%; 
-  object-fit: cover;
-  object-position: center; /
-}
-#works .works-list dd {
-  width: 60%;
-}
-#works .works-list dd .title {
-  font-weight: 500;
-  font-size: 1.3rem;
-  margin: 10px 0 30px 0;
-  display: inline-block;
-  position: relative;
-}
-#works .works-list dd .title::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 50%;
-  border-bottom: 2px solid var(--color-sub-blue);
-}
-#works .works-list dd .text {
-  text-align: left;
-  font-size: 1rem;
-} */
 /* --------------------------------
 about
 -------------------------------- */
@@ -900,7 +875,6 @@ TB
   }
   #mainvisual .concept-title {
     font-size: 2.2rem;
-    bottom: 6%;
   }
 
 }
@@ -964,25 +938,33 @@ SP
   -------------------------------- */
 
   #mainvisual .concept-title {
-    bottom: 35px;
-    left: 15px;
     font-size: 1.5rem;
     line-height: 44px;
+    right: 2%;
+    left: 2%;
+  }
+  #mainvisual .sub-copy {
+    font-size: 1.1rem;
   }
 
   /* --------------------------------
   [SP]strengths
   -------------------------------- */
+  #strengths {
+    padding: 10px;padding: 10px;
+  }
   #strengths .flex {
     align-items: center;
   }
-  
+  #strengths .title {
+    margin-bottom: 10px;
+  }
   #strengths .flex .item {
     width: 100%;
     margin-bottom: 40px;
   }
   #strengths .flex .item .img {
-    width: 100%;
+    width: 70%;
     margin: 0 auto;
     margin-bottom: 20px;
   }
@@ -1010,7 +992,7 @@ SP
     margin-left: 0;
     width: 90%;
     padding: 30px 20px;
-    margin-top: -30px;
+    margin-top: -50px;
   }
   #services .flex.reverse .desc {
     margin-right: 0;
@@ -1019,19 +1001,33 @@ SP
   /* --------------------------------
   [SP]works
   -------------------------------- */
-  
+  #works {
+    padding: 10px;
+  }
   #works .text {
     margin-bottom: 30px;
   }
-  #works .works-list {
-    gap: 20px 2%;
-  }
-  #works .works-list dt,
-  #works .works-list dd {
+  #works .flex {
+    gap: 20px 0;
+    margin-bottom: 30px;
+  } 
+  #works .flex .item {
     width: 100%;
   }
-  #works .works-list dd .title {
-    text-align: center;
+  #works .insta {
+    flex-direction: row;
+    padding: 8px;
+    gap: 0 4%;
+  }
+  #works .insta .text {
+    font-size: 0.85rem;
+    margin-bottom: 0px;
+  }
+  #works .insta .link {
+    font-size: 0.85rem;
+  }
+  #works .insta .img img {
+    height: auto;
   }
 
   /* --------------------------------
