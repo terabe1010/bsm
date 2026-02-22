@@ -556,7 +556,7 @@ TB
     height: 100%;
   }
   #header .site-title {
-    width: 80px;
+    width: 200px;
   }
   #header .site-title .logo-img {
     max-width: 150px;
@@ -891,7 +891,7 @@ SP
     margin-bottom: 40px;
   }
   #strengths .flex .item .img {
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 20px;
   }
