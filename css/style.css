@@ -24,7 +24,7 @@ body {
   --color-bee-brown: #624D21;
   /* ===== ベースカラー ===== */
   --color-white: #FFFFFF;
-  --color-bg-light: #FBFCFB;
+  --color-bg-light: #f7f7f7;
   /* ===== テキストカラー ===== */
   --color-text-main: #333333;
   --color-text-sub: #555555;
@@ -371,7 +371,7 @@ strengths
 }
 
 #strengths .flex {
-  gap: 0 3%;
+  gap: 0 4%;
   justify-content: center;
 }
 #strengths .flex .item {
@@ -447,11 +447,70 @@ services
 /* --------------------------------
 works
 -------------------------------- */
+#works {
+  background-color: var(--color-bg-light);
+  padding: 40px 40px;
+}
+
 #works .text {
   text-align: center;
   font-size: 1.2rem;
   margin-bottom: 50px;
 }
+#works .flex {
+  gap: 0 2%;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+#works .flex .item {
+  width: 31%;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  border-radius: 15px;
+}
+#works .flex .item .img {
+  margin-bottom: 30px;
+}
+#works .flex .item .img img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+#works .flex .item .title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 0 20px 20px;
+}
+#works .flex .item .text {
+  font-size: 1rem;
+  text-align: left;
+  padding: 0 20px 0;
+  margin-bottom: 20px;
+}
+#works .insta {
+  max-width: 600px;
+  margin:0 auto ;
+  gap:0 0 ;
+  justify-content: flex-start;
+  background-color: var(--color-white);
+  padding: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+} 
+
+#works .insta .text {
+  margin-bottom: 5px;
+}
+#works .insta .link {
+  font-size: 1.2rem;
+  color: var(--color-main-green-dark);
+  transition: ease 0.3s;
+}
+#works .insta .img {
+  width: 25%;
+}
+#works .insta .img img {
+  height: 80px;
+}
+
+/* 
 #works .works-list {
   display: flex;
   flex-wrap: wrap;
@@ -462,7 +521,7 @@ works
 }
 #works .works-list dt .img {
   width: 100%;
-  height: 300px; /* 高さを固定 */
+  height: 300px;
   overflow: hidden;
 }
 #works .works-list dt img {
@@ -478,11 +537,21 @@ works
   font-weight: 500;
   font-size: 1.3rem;
   margin: 10px 0 30px 0;
+  display: inline-block;
+  position: relative;
+}
+#works .works-list dd .title::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50%;
+  border-bottom: 2px solid var(--color-sub-blue);
 }
 #works .works-list dd .text {
   text-align: left;
   font-size: 1rem;
-}
+} */
 /* --------------------------------
 about
 -------------------------------- */
@@ -492,6 +561,19 @@ about
 #about .flex .left,
 #about .flex .right {
   width: 48%;
+}
+#about .flex .title {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 20px;
+}
+#about .flex .title::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50%;
+  border-bottom: 2px solid var(--color-sub-blue);
 }
 #about .flex .left .text {
   margin-bottom: 50px;
