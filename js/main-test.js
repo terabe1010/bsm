@@ -1,27 +1,4 @@
 $(function () {
-  /*=================================================
-  ハンバーガーメニュー
-  ===================================================*/
-  $('.hamburger').on('click', function () {
-    if ($('#header').hasClass('open')) {
-      $('#header').removeClass('open');
-    } else {
-      $('#header').addClass('open');
-    }
-  });
-  
-  // #maskのエリアをクリックした時にメニューを閉じる
-  $('#mask').on('click', function () {
-    $('#header').removeClass('open');
-  });
-
-  // リンクをクリックした時にメニューを閉じる
-  $('#menu-sp a').on('click', function () {
-    $('#header').removeClass('open');
-  });
-  $('#fixed-menu-sp a').on('click', function () {
-    $('#header').removeClass('open');
-  });
 
   /*=================================================
   フェード
@@ -52,22 +29,45 @@ $(function () {
     $('body,html').animate({ scrollTop: position }, speed, type);
     return false;
   });
+});
 
-  /*=================================================
-  追従ヘッダー
-  ===================================================*/
-  $(window).scroll(function () {
-		// 画面スクロールの位置を取得
-		var scroll = $(window).scrollTop();
-
-		// スクロール位置が200pxを超えると追従ヘッダーを表示
-		if (scroll > 200) {
-			$('#js-fixed-header').addClass('is-show');
-		}
-		else {
-			$('#js-fixed-header').removeClass('is-show');
-		}
-	});
+/*=================================================
+ハンバーガー、追従ヘッダー
+===================================================*/
+document.addEventListener('DOMContentLoaded', () => {
+  // --- 1. 要素の取得（新しい構造に合わせています） ---
+  const header = document.querySelector('#header');
+  const btn = document.querySelector('.hamburger');
+  const body = document.querySelector('body');
+  const mask = document.querySelector('#mask');
+  const menuLinks = document.querySelectorAll('#menu-sp a');
+  // --- 2. スクロール時のヘッダー制御 ---
+  window.addEventListener('scroll', () => {
+    // 100px以上スクロールしたらクラスを付与
+    if (window.scrollY > 100) {
+      header.classList.add('is-fixed');
+    } else {
+      header.classList.remove('is-fixed');
+    }
+  });
+  // --- 3. ハンバーガーメニューの開閉 ---
+  if (btn) { // ボタンが存在する場合のみ実行
+    btn.addEventListener('click', () => {
+      body.classList.toggle('nav-open');
+    });
+  }
+  // 背景マスクをクリックで閉じる
+  if (mask) {
+    mask.addEventListener('click', () => {
+      body.classList.remove('nav-open');
+    });
+  }
+  // メニュー内のリンクをクリックしたら閉じる
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      body.classList.remove('nav-open');
+    });
+  });
 });
 
 
