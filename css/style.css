@@ -339,6 +339,40 @@ services
 #services .desc .text {
   text-align: left;
 }
+#services .cta {
+  margin-bottom: 80px;
+  text-align: center;
+}
+#services .cta .btn {
+  display: inline-block;
+  padding: 10px 60px 10px 30px;
+  background-color: var(--color-main-green);
+  color: var(--color-white);
+  border: 1px solid var(--color-main-green);
+  position: relative;
+}
+#services .cta .btn::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-top: 1px solid var(--color-white);
+  border-right: 1px solid var(--color-white);
+  position: absolute;
+  top: 17px;
+  right: 28px;
+  transform: rotate(45deg);
+  transition: ease 0.3s;
+}
+#services .cta .btn:hover {
+  background-color: var(--color-white);
+  color: var(--color-main-green);
+}
+#services .cta .btn:hover::after {
+  border-top: 1px solid var(--color-main-green);
+  border-right: 1px solid var(--color-main-green);
+  right: 20px;
+}
+
 
 /* --------------------------------
 works
@@ -432,6 +466,45 @@ works
 }
 
 /* --------------------------------
+Greetings
+-------------------------------- */
+#greetings {
+  max-width: 700px;
+  padding: 0 16px;
+  margin: 0 auto 150px;
+}
+#greetings .text {
+  font-size: 1.1rem;
+  line-height: 40px;
+}
+#greetings .ceo {
+  display: block;
+  text-align: right;
+  margin-top: 30px;
+}
+#greetings .area {
+  margin-top: 80px;
+  
+}
+#greetings .area .title {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 20px;
+}
+#greetings .area .title::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50%;
+  border-bottom: 2px solid var(--color-sub-blue);
+}
+#greetings .area .text {
+  line-height: normal;
+  font-size: 1rem;
+}
+
+/* --------------------------------
 about
 -------------------------------- */
 #about .flex {
@@ -470,9 +543,9 @@ contact
 #contact .cta .btn {
   display: inline-block;
   padding: 10px 60px 10px 30px;
-  border: 1px solid var(--color-accent-orange);
+  border: 1px solid var(--color-main-green);
   position: relative;
-  background-color: var(--color-accent-orange);
+  background-color: var(--color-main-green);
   color: var(--color-white);
 }
 #contact .cta .btn::after {
@@ -489,11 +562,11 @@ contact
 }
 #contact .cta .btn:hover {
   background-color: var(--color-white);
-  color: var(--color-accent-orange);
+  color: var(--color-main-green);
 }
 #contact .cta .btn:hover::after {
-  border-top: 1px solid var(--color-accent-orange);
-  border-right: 1px solid var(--color-accent-orange);
+  border-top: 1px solid var(--color-main-green);
+  border-right: 1px solid var(--color-main-green);
   right: 20px;
 }
 
