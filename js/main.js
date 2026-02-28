@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuLinks = document.querySelectorAll('#menu-sp a');
   // --- 2. スクロール時のヘッダー制御 ---
   window.addEventListener('scroll', () => {
-    // 100px以上スクロールしたらクラスを付与
-    if (window.scrollY > 100) {
+    // 400px以上スクロールしたらクラスを付与
+    if (window.scrollY > 400) {
       header.classList.add('is-fixed');
     } else {
       header.classList.remove('is-fixed');

@@ -114,7 +114,7 @@ header
 #header.is-fixed {
   position: fixed;
   top: 0;
-  height: 60px;
+  height: 80px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   transform: translateY(-100%);
   animation: slideIn 0.5s forwards;
@@ -127,7 +127,8 @@ header
   align-items: center;
 }
 #header .site-title {
-  width: 260px;
+  /* width: 260px; */
+  width: 340px;
   line-height: 1px;
   margin-left: 30px;
 }
@@ -211,7 +212,8 @@ mainvisual
   font-size: 2.5rem;
   position: absolute;
   top: 17%;
-  right: 50px;
+  /* right: 50px; */
+  right: 23%;
   line-height: 70px;
   letter-spacing: 0rem;
   color: var(--color-white);
@@ -425,7 +427,7 @@ works
   margin-bottom: 20px;
 }
 #works .insta {
-  max-width: 600px;
+  max-width: 650px;
   margin:0 auto ;
   gap:0 0 ;
   justify-content: flex-start;
@@ -436,6 +438,7 @@ works
 } 
 #works .insta .text {
   margin-bottom: 5px;
+  text-align: left;
 }
 #works .insta .link {
   font-size: 1.2rem;
@@ -463,6 +466,10 @@ works
 }
 #works .insta .img img {
   height: 80px;
+}
+#works .insta .new {
+  font-size: 1rem;
+  margin-top: 15px;
 }
 
 /* --------------------------------
@@ -539,6 +546,9 @@ contact
 -------------------------------- */
 #contact {
   text-align: center;
+}
+#contact .cta {
+  margin-bottom: 50px;
 }
 #contact .cta .btn {
   display: inline-block;
