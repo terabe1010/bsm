@@ -933,11 +933,11 @@ SP
     gap: 0 4%;
   }
   #works .insta .text {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     margin-bottom: 0px;
   }
   #works .insta .link {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
   #works .insta .img {
     width: 25%;
@@ -948,7 +948,9 @@ SP
   #works .insta .img img {
     height: auto;
   }
-
+  #works .insta .new {
+    font-size: 0.85rem;
+  }
   /* --------------------------------
   [SP]Greetings
   -------------------------------- */ 
