@@ -424,7 +424,7 @@ works
   font-size: 1rem;
   text-align: left;
   padding: 0 20px 0;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 #works .insta {
   max-width: 650px;
@@ -476,7 +476,7 @@ works
 Greetings
 -------------------------------- */
 #greetings {
-  max-width: 700px;
+  max-width: 740px;
   padding: 0 16px;
   margin: 0 auto 150px;
 }
@@ -491,6 +491,8 @@ Greetings
 }
 #greetings .area {
   margin-top: 80px;
+  background-color: var(--color-bg-light);
+  padding: 25px;
   
 }
 #greetings .area .title {
@@ -599,6 +601,9 @@ TB
   -------------------------------- */
   #header {
     padding: 0;
+    height: 60px;
+  }
+  #header.is-fixed {
     height: 60px;
   }
   #header .inner {
@@ -776,7 +781,7 @@ SP
     display: none;
   }
   section {
-    margin-bottom: 80px;
+    margin-bottom: 120px;
   }
 
   /* --------------------------------
@@ -816,7 +821,7 @@ SP
   [SP]strengths
   -------------------------------- */
   #strengths {
-    padding: 10px;padding: 10px;
+    padding: 40px 10px 30px;
   }
   #strengths .flex {
     align-items: center;
@@ -870,13 +875,13 @@ SP
   [SP]works
   -------------------------------- */
   #works {
-    padding: 10px;
+    padding: 40px 10px 30px;
   }
   #works .text {
     margin-bottom: 30px;
   }
   #works .flex {
-    gap: 20px 0;
+    gap: 40px 0;
     margin-bottom: 30px;
   } 
   #works .flex .item {
@@ -884,7 +889,7 @@ SP
   }
   #works .insta {
     flex-direction: row;
-    padding: 8px;
+    padding: 15px 8px;
     gap: 0 4%;
   }
   #works .insta .text {
@@ -897,6 +902,22 @@ SP
   #works .insta .img img {
     height: auto;
   }
+
+  /* --------------------------------
+  [SP]Greetings
+  -------------------------------- */ 
+  #greetings {
+    padding: 0;
+  }
+  #greetings .text {
+    font-size: 1rem;
+    line-height: 35px;
+  }
+  #greetings .area {
+    padding: 10px;
+    
+  }
+
 
   /* --------------------------------
   [SP]about
