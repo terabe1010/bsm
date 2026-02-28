@@ -375,7 +375,6 @@ services
   right: 20px;
 }
 
-
 /* --------------------------------
 works
 -------------------------------- */
@@ -493,7 +492,6 @@ Greetings
   margin-top: 80px;
   background-color: var(--color-bg-light);
   padding: 25px;
-  
 }
 #greetings .area .title {
   display: inline-block;
@@ -797,6 +795,7 @@ SP
   #header .hamburger {
     right: 20px;
   }
+
   /* --------------------------------
   [SP]スクロールダウン
   -------------------------------- */
@@ -853,11 +852,8 @@ SP
   #services .flex .img {
     margin-bottom: 30px;
     height: 300px;
-
     flex: none;
-    
   }
-
   #services .flex.reverse {
     flex-direction: column;
   }
@@ -915,7 +911,6 @@ SP
   }
   #greetings .area {
     padding: 10px;
-    
   }
 
 
