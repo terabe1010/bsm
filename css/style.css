@@ -490,7 +490,7 @@ works
   width: 25%;
 }
 #works .insta .img img {
-  height: 80px;
+  height: 100px;
 }
 #works .insta .new {
   font-size: 1rem;
@@ -576,7 +576,7 @@ contact
 #contact {
   text-align: center;
 }
-#contact .cta {
+#contact .text {
   margin-bottom: 50px;
 }
 #contact .cta .btn {
@@ -938,6 +938,12 @@ SP
   }
   #works .insta .link {
     font-size: 0.85rem;
+  }
+  #works .insta .img {
+    width: 25%;
+  }
+  #works .insta .desc {
+    width: 70%;
   }
   #works .insta .img img {
     height: auto;
