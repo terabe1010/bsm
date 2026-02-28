@@ -637,7 +637,7 @@ TB
     height: 100%;
   }
   #header .site-title {
-    width: 200px;
+    width: 250px;
   }
   #header .site-title .logo-img {
     max-width: 150px;
@@ -951,10 +951,10 @@ SP
   }
   #greetings .text {
     font-size: 1rem;
-    line-height: 35px;
+    line-height: 30px;
   }
   #greetings .area {
-    padding: 30px 15px;
+    padding: 20px 15px;
   }
 
 
