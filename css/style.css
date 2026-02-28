@@ -341,6 +341,15 @@ services
 #services .desc .text {
   text-align: left;
 }
+#services .flex.featured .desc{
+  border: 3px solid var(--color-main-green);
+  box-shadow: 0 18px 40px rgba(0,0,0,.18);
+  transform: translateY(-10px);
+}
+#services .flex.featured .title{
+  background: linear-gradient(transparent 65%, #fff2a8 65%);
+}
+
 #services .cta {
   margin-bottom: 80px;
   text-align: center;
@@ -374,6 +383,23 @@ services
   border-right: 1px solid var(--color-main-green);
   right: 20px;
 }
+#services {
+  padding-top: 12px;      /* 上余白を少し追加 */
+  margin-bottom: 140px;   /* 既定120px -> 少し強め */
+}
+
+#services .sec-title {
+  font-size: 1.95rem;     /* 既定1.7remより少し大きく */
+  margin-bottom: 72px;    /* 既定60pxより少し広く */
+}
+
+#services .sec-title .en {
+  font-size: 1.35rem;     /* 既定1.3remを微調整 */
+  margin-top: 12px;
+}
+
+
+
 
 /* --------------------------------
 works
@@ -481,7 +507,8 @@ Greetings
 }
 #greetings .text {
   font-size: 1.1rem;
-  line-height: 40px;
+  line-height: 35px;
+  letter-spacing: 0.1rem;
 }
 #greetings .ceo {
   display: block;
@@ -490,8 +517,9 @@ Greetings
 }
 #greetings .area {
   margin-top: 80px;
-  background-color: var(--color-bg-light);
+  /* background-color: var(--color-bg-light); */
   padding: 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
 #greetings .area .title {
   display: inline-block;
@@ -509,6 +537,7 @@ Greetings
 #greetings .area .text {
   line-height: normal;
   font-size: 1rem;
+  letter-spacing: normal;
 }
 
 /* --------------------------------
@@ -866,6 +895,17 @@ SP
   #services .flex.reverse .desc {
     margin-right: 0;
   }
+  #services {
+    padding-top: 8px;
+    margin-bottom: 130px;
+  }
+  #services .sec-title {
+    font-size: 1.65rem;
+    margin-bottom: 56px;
+  }
+  #services .sec-title .en {
+    font-size: 1.05rem;
+  }
 
   /* --------------------------------
   [SP]works
@@ -875,6 +915,7 @@ SP
   }
   #works .text {
     margin-bottom: 30px;
+    font-size: 1rem;
   }
   #works .flex {
     gap: 40px 0;
@@ -883,9 +924,12 @@ SP
   #works .flex .item {
     width: 100%;
   }
+  #works .flex .item .title {
+    margin-bottom: 35px;
+  }
   #works .insta {
     flex-direction: row;
-    padding: 15px 8px;
+    padding: 25px 8px;
     gap: 0 4%;
   }
   #works .insta .text {
@@ -910,7 +954,7 @@ SP
     line-height: 35px;
   }
   #greetings .area {
-    padding: 10px;
+    padding: 30px 15px;
   }
 
 
@@ -927,6 +971,17 @@ SP
   #about .flex .right {
     width: 100%;
   }
+
+  /* --------------------------------
+  [SP]Contact
+  -------------------------------- */
+  #contact .sec-title {
+    margin-bottom: 80px;
+  }
+  #contact .cta {
+    margin-bottom: 60px;
+  }
+
 
   /* --------------------------------
   [SP]footer
