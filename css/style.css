@@ -566,6 +566,9 @@ about
 #about .flex .left .text {
   margin-bottom: 50px;
 }
+#about .flex .left .img img {
+  width: 80%;
+}
 #about .right .text {
   margin-bottom: 20px;
 }
@@ -972,7 +975,7 @@ SP
   #about .flex {
     gap: 30px 0;
   }
-  #about .flex .img img {
+  #about .flex .left .img img {
     width: 100%;
   }
   #about .flex .left,
