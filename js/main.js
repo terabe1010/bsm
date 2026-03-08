@@ -1,6 +1,6 @@
 $(function () {
 
-  /*=================================================
+  /*===================================================
   フェード
   ===================================================*/
   // スクロールして表示領域に入ったらclass付与
@@ -11,7 +11,7 @@ $(function () {
     $(this).addClass("is-inview");
   });
 
-  /*=================================================
+  /*===================================================
   スムーススクロール
   ===================================================*/
   $('a[href^="#"]').click(function () {
@@ -31,7 +31,7 @@ $(function () {
   });
 });
 
-/*=================================================
+/*===================================================
 ハンバーガー、追従ヘッダー
 ===================================================*/
 document.addEventListener('DOMContentLoaded', () => {
@@ -70,6 +70,32 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+/*===================================================
+animation
+===================================================*/
+document.addEventListener('DOMContentLoaded', () => {
+  const targets = document.querySelectorAll('.reveal');
+  if (!targets.length) return;
+
+  // Fallback for very old browsers.
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach((el) => el.classList.add('is-visible'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        obs.unobserve(entry.target); // 1回だけ再生したい場合
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  targets.forEach((el) => observer.observe(el));
+});
 
 
 

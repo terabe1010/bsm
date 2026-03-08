@@ -96,6 +96,40 @@ section {
 }
 
 /* --------------------------------
+animation
+-------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px); /* 下にずらす */
+  transition: opacity 2.0s ease, transform 2s ease;
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* strengths: 3カラムを左から順に表示 */
+#strengths .flex .item:nth-child(1) .reveal {
+  transition-delay: 0s;
+}
+#strengths .flex .item:nth-child(2) .reveal {
+  transition-delay: 0.5s;
+}
+#strengths .flex .item:nth-child(3) .reveal {
+  transition-delay: 1.0s;
+}
+/* works: 3カラムを左から順に表示（strengthsと同じタイミング） */
+#works .flex .item:nth-child(1).reveal {
+  transition-delay: 0s;
+}
+#works .flex .item:nth-child(2).reveal {
+  transition-delay: 0.5s;
+}
+#works .flex .item:nth-child(3).reveal {
+  transition-delay: 1.0s;
+}
+
+/* --------------------------------
 header
 -------------------------------- */
 #header {
